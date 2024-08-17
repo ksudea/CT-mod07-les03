@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Lesson 3 Form</title>
+</head>
+
+<body>
+    <h1>Forms To Fill Out:</h1>
+
+    <form action="/submit" method="post">
+        <fieldset>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your e-mail" required va>
+        <button type=submit>Submit</button>
+        </fieldset>
+    </form>
+
+    <form action="/submit" method="post">
+        <fieldset>
+        <label for="quantity">Enter quantity:</label>
+        <input type="number" id="quantity" name="quantity" placeholder="Quantity between 10 and 100" min="10" max="100" step>
+        <button type=submit>Submit</button>
+        </fieldset>
+    </form>
+
+    <form action="/submit" method="post">
+        <fieldset>
+        <label for="date">Select date:</label>
+        <input type="date" id="date" name="date" placeholder="Select date" min="2018-01-01" max="2024-12-01">
+        <button type=submit>Submit</button>
+        </fieldset>
+    </form>
+
+    <form action="/submit" method="post">
+        <fieldset>
+        <label for="rating">Rate your experience between 0 to 5:</label>
+        <input type="range" id="rating" name="rating" placeholder="5" min="0" max="5">
+        <button type=submit>Submit</button>
+        </fieldset>
+    </form>
+
+    <form action="/submit" method="post">
+        <fieldset>
+        <label for="color_choice">Choose your signature color:</label>
+        <input type="color" id="color_choice" name="color_choice" value="#ff0000">
+        <button type=submit>Submit</button>
+        </fieldset>
+    </form>
+
+    <form action="/submit" method="post">
+        <fieldset>
+        <label for="programming">Choose your preferred programming language:</label>
+            <select id="programming" name="programming">
+                <option value="python">Python</option>
+                <option value="java">Java</option>
+                <option value="javascript">Javascript</option>
+                <option value="c">C</option>
+            </select>
+
+        <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+
+    <form action="/submit" method="post">
+        <fieldset>
+            <legend>Select your expertise/proficiency with that language:</legend>
+            <div>
+              <input type="radio" id="proficiency1" name="proficiency" value="Python" />
+              <label for="proficiency1">Beginner</label>
+            
+              <input type="radio" id="proficiency2" name="proficiency" value="Java" />
+              <label for="proficiency2">Intermediate</label>
+              
+              <input type="radio" id="proficiency3" name="proficiency" value="C" />
+              <label for="proficiency3">Advanced</label>
+            </div>
+            <div>
+              <button type="submit">Submit</button>
+            </div>
+          </fieldset>
+    </form>
+
+    <form action="/submit" method="post">
+        <fieldset>
+            <legend>Choose your preferred development platform:</legend>  
+            <div>
+              <input type="checkbox" id="web" name="web" checked />
+              <label for="web">Web</label>
+            </div>
+            <div>
+              <input type="checkbox" id="mobile" name="mobile" />
+              <label for="mobile">Mobile</label>
+            </div>
+            <div>
+                <input type="checkbox" id="desktop" name="desktop" />
+                <label for="desktop">Desktop</label>
+            </div>
+            <div>
+                <button type="submit">Submit</button>
+              </div>
+          </fieldset>
+    </form>
+
+    <div role="alert" aria-live="assertive" id="error-message">Please fill out all required fields.</div>
+</body>
